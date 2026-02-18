@@ -195,6 +195,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
+                {/* Google Search Console 소유권 확인 */}
+                <meta name="google-site-verification" content="47z3uMVzsCyw66vTGaSLLtCKy3vebHH5QOU4H3yCDR8" />
+
                 {/* Google Fonts - Inter (실제 로드) */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
