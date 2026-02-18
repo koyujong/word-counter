@@ -198,6 +198,19 @@ export default function RootLayout({ children }) {
                 {/* Google Search Console 소유권 확인 */}
                 <meta name="google-site-verification" content="47z3uMVzsCyw66vTGaSLLtCKy3vebHH5QOU4H3yCDR8" />
 
+                {/* Google tag (gtag.js) - GA4 */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QCN1L3WR0" />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-0QCN1L3WR0');
+                        `,
+                    }}
+                />
+
                 {/* Google Fonts - Inter (실제 로드) */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
