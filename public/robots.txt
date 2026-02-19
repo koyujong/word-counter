@@ -1,8 +1,17 @@
 # Word Counter & Character Counter
-# https://wordcounter.example.com
+# https://word-counter-zeta-eight.vercel.app
 
+# 모든 검색 로봇 허용
 User-agent: *
 Allow: /
 
+# 네이버 검색로봇 명시적 허용
+User-agent: Yeti
+Allow: /
+
+# 구글 검색로봇 명시적 허용
+User-agent: Googlebot
+Allow: /
+
 # 사이트맵 경로
-Sitemap: https://wordcounter.example.com/sitemap.xml
+Sitemap: https://word-counter-zeta-eight.vercel.app/sitemap.xml
