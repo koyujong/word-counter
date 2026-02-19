@@ -16,7 +16,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
  * ✅ 언어 설정 (html lang)
  */
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://wordcounter.example.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ct.4kdrivewalk.com";
 
 // ===== SEO 메타데이터 (Next.js Metadata API) =====
 export const metadata = {
