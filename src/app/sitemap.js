@@ -6,7 +6,7 @@
  */
 
 export default function sitemap() {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wordcounter.example.com";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ct.4kdrivewalk.com";
 
     return [
         {
