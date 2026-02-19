@@ -198,6 +198,9 @@ export default function RootLayout({ children }) {
                 {/* Google Search Console 소유권 확인 */}
                 <meta name="google-site-verification" content="47z3uMVzsCyw66vTGaSLLtCKy3vebHH5QOU4H3yCDR8" />
 
+                {/* 네이버 서치어드바이저 소유권 확인 */}
+                <meta name="naver-site-verification" content="8c2d85ada57223c9f5412c8ae83670d9bc6aad3f" />
+
                 {/* Google tag (gtag.js) - GA4 */}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QCN1L3WR0" />
                 <script
