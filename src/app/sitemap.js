@@ -5,8 +5,17 @@
  * 배포 시 도메인을 실제 URL로 변경하세요.
  */
 
+import { blogPosts } from '@/lib/blogData';
+
 export default function sitemap() {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ct.4kdrivewalk.com";
+
+    const blogRoutes = blogPosts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    }));
 
     return [
         {
@@ -15,5 +24,12 @@ export default function sitemap() {
             changeFrequency: "weekly",
             priority: 1.0,
         },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.9,
+        },
+        ...blogRoutes,
     ];
 }

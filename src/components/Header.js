@@ -8,6 +8,7 @@
  */
 
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 export default function Header({ isDark, onToggleDark }) {
     const { locale, t, changeLanguage, availableLocales } = useLanguage();
@@ -16,7 +17,7 @@ export default function Header({ isDark, onToggleDark }) {
         <header className="w-full border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
                 {/* 좌측: 사이트 로고 + 제목 */}
-                <div className="flex items-center gap-3">
+                <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                     {/* 아이콘: 연필 모양 SVG */}
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-md shadow-indigo-200 dark:shadow-indigo-900">
                         <svg
@@ -41,10 +42,16 @@ export default function Header({ isDark, onToggleDark }) {
                             {t.siteSubtitle}
                         </p>
                     </div>
-                </div>
+                </Link>
 
                 {/* 우측: 다크 모드 토글 + 언어 선택 */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                    <Link
+                        href="/blog"
+                        className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    >
+                        Blog
+                    </Link>
                     {/* 다크 모드 토글 버튼 */}
                     <button
                         onClick={onToggleDark}
