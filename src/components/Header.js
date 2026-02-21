@@ -8,10 +8,12 @@
  */
 
 import { useLanguage } from "@/context/LanguageContext";
+import { useDarkMode } from "@/hooks/useDarkMode";
 import Link from "next/link";
 
-export default function Header({ isDark, onToggleDark }) {
+export default function Header() {
     const { locale, t, changeLanguage, availableLocales } = useLanguage();
+    const { isDark, toggleDarkMode } = useDarkMode();
 
     return (
         <header className="w-full border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
@@ -62,7 +64,7 @@ export default function Header({ isDark, onToggleDark }) {
                     </nav>
                     {/* 다크 모드 토글 버튼 */}
                     <button
-                        onClick={onToggleDark}
+                        onClick={toggleDarkMode}
                         className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                         aria-label={t.darkModeLabel}
                         title={t.darkModeLabel}

@@ -10,7 +10,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { analyzeText } from "@/lib/textAnalyzer";
-import { useDarkMode } from "@/hooks/useDarkMode";
 import { useAutoSave, loadSavedText } from "@/hooks/useAutoSave";
 import Header from "@/components/Header";
 import StatsPanel from "@/components/StatsPanel";
@@ -27,7 +26,6 @@ import SeoContent from "@/components/SeoContent";
 
 export default function HomePage() {
     const { t } = useLanguage();
-    const { isDark, toggleDarkMode } = useDarkMode();
 
     // 텍스트 입력 상태 — 마운트 시 localStorage에서 복원
     const [text, setText] = useState("");
@@ -60,7 +58,7 @@ export default function HomePage() {
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-gray-950 flex flex-col transition-colors duration-300">
             {/* ===== 헤더 ===== */}
-            <Header isDark={isDark} onToggleDark={toggleDarkMode} />
+            <Header />
 
             {/* ===== 메인 콘텐츠 영역 ===== */}
             <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6" role="main">
