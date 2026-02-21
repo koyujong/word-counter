@@ -17,6 +17,7 @@ import TextEditor from "@/components/TextEditor";
 import GoalMode from "@/components/GoalMode";
 import TextTransform from "@/components/TextTransform";
 import KeywordFrequency from "@/components/KeywordFrequency";
+import SeoKeywordAnalysis from "@/components/SeoKeywordAnalysis";
 import PlatformCheck from "@/components/PlatformCheck";
 import ReadabilityScore from "@/components/ReadabilityScore";
 import FindReplace from "@/components/FindReplace";
@@ -108,6 +109,9 @@ export default function HomePage() {
 
                     {/* 🔍 찾기 & 바꾸기 */}
                     <FindReplace text={text} onTextChange={handleTextChange} />
+
+                    {/* 🎯 타겟 키워드 밀도 분석 */}
+                    <SeoKeywordAnalysis text={text} stats={stats} />
 
                     {/* 🔢 키워드 빈도 분석 */}
                     <KeywordFrequency text={text} />
