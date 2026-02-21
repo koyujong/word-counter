@@ -46,12 +46,20 @@ export default function Header({ isDark, onToggleDark }) {
 
                 {/* 우측: 다크 모드 토글 + 언어 선택 */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                    <Link
-                        href="/blog"
-                        className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                    >
-                        Blog
-                    </Link>
+                    <nav className="flex items-center gap-4 sm:gap-6 mr-1 sm:mr-2">
+                        <Link
+                            href="/"
+                            className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/blog"
+                            className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                        >
+                            Blog
+                        </Link>
+                    </nav>
                     {/* 다크 모드 토글 버튼 */}
                     <button
                         onClick={onToggleDark}
