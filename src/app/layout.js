@@ -236,10 +236,10 @@ export default function RootLayout({ children }) {
                 />
 
                 {/* Google AdSense 글로벌 스크립트 */}
-                <script
-                    async
+                <Script
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3488637908196788"
                     crossOrigin="anonymous"
+                    strategy="afterInteractive"
                 />
 
                 {/* JSON-LD 구조화 데이터 (구글 리치 리절트) */}
