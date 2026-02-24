@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 /**
@@ -44,9 +45,16 @@ export const metadata = {
         "paragraph counter",
     ],
 
-    // canonical URL (중복 페이지 방지)
+    // canonical URL + hreflang (다국어 SEO)
     alternates: {
         canonical: BASE_URL,
+        languages: {
+            'en': BASE_URL,
+            'ko': BASE_URL,
+            'ja': BASE_URL,
+            'es': BASE_URL,
+            'x-default': BASE_URL,
+        },
     },
 
     // 로봇 지시자
@@ -202,17 +210,18 @@ export default function RootLayout({ children }) {
                 <meta name="naver-site-verification" content="8c2d85ada57223c9f5412c8ae83670d9bc6aad3f" />
 
                 {/* Google tag (gtag.js) - GA4 */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QCN1L3WR0" />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            gtag('config', 'G-0QCN1L3WR0');
-                        `,
-                    }}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-0QCN1L3WR0"
+                    strategy="afterInteractive"
                 />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-0QCN1L3WR0');
+                    `}
+                </Script>
 
                 {/* Google Fonts - Inter (실제 로드) */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />

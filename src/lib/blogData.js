@@ -1,6 +1,8 @@
 export const blogPosts = [
     {
         id: 1,
+        language: "en",
+        translationGroupId: "5min-speech",
         slug: "how-many-words-is-a-5-minute-speech",
         title: "How Many Words is a 5 Minute Speech? A Comprehensive Guide",
         description: "Discover exactly how many words is a 5 minute speech. Learn average speaking rates, pacing strategies, and how to craft the perfect presentation.",
@@ -64,6 +66,8 @@ So, how many words is a 5 minute speech? Aim for the golden range of **650 to 75
     },
     {
         id: 2,
+        language: "en",
+        translationGroupId: "seo-meta-descriptions-2026",
         slug: "ideal-character-limit-for-seo-meta-descriptions-2026",
         title: "The Ideal Character Limit for SEO Meta Descriptions in 2026",
         description: "Learn the ideal character limit for seo meta descriptions in 2026. Discover how to write compelling snippets that drive high CTR and rank well on Google.",
@@ -130,6 +134,8 @@ To dominate the SERPs, understanding the **ideal character limit for seo meta de
     },
     {
         id: 3,
+        language: "en",
+        translationGroupId: "google-ads-character-limits",
         slug: "google-ads-headline-and-description-character-limits",
         title: "Mastering Google Ads Headline and Description Character Limits",
         description: "A complete guide to Google Ads headline and description character limits. Learn how to maximize your ad copy to increase conversions and quality scores.",
@@ -202,6 +208,8 @@ Mastering the **google ads headline and description character limits** is not ju
     },
     {
         id: 4,
+        language: "en",
+        translationGroupId: "instagram-bio-limits",
         slug: "instagram-bio-character-limit-spaces-emojis",
         title: "The Ultimate Guide to Instagram Bio Character Limits",
         description: "Learn the exact instagram bio character limit including spaces and emojis. Master how to optimize your IG profile for maximum engagement and followers.",
@@ -269,6 +277,8 @@ Your Instagram bio is small but mighty. By deeply understanding the **instagram 
     },
     {
         id: 5,
+        language: "en",
+        translationGroupId: "500-word-essay-characters",
         slug: "how-many-characters-with-spaces-500-word-essay",
         title: "How Many Characters with Spaces is a 500 Word Essay?",
         description: "Find out exactly how many characters with spaces is a 500 word essay. Learn length requirements, formatting rules, and tips for high school and college writing.",
@@ -343,6 +353,8 @@ Understanding **how many characters with spaces is a 500 word essay** is essenti
     },
     {
         id: 6,
+        language: "en",
+        translationGroupId: "linkedin-post-character-limit",
         slug: "character-limit-for-linkedin-post-image",
         title: "Understanding the Character Limit for a LinkedIn Post with an Image",
         description: "Master the character limit for linkedin post with image to drive high engagement. Learn formatting best practices and read-more truncation rules for B2B success.",
@@ -406,6 +418,8 @@ The **character limit for linkedin post with image** provides a generous playgro
     },
     {
         id: 7,
+        language: "en",
+        translationGroupId: "30sec-commercial-script",
         slug: "how-many-words-30-second-commercial-script",
         title: "How Many Words in a 30 Second Commercial Script?",
         description: "Discover exactly how many words in a 30 second commercial script. Learn industry standard pacing, visual storytelling, and formatting for scriptwriters.",
@@ -467,6 +481,8 @@ When writing a 30-second commercial, discipline is your greatest asset. By stric
     },
     {
         id: 8,
+        language: "en",
+        translationGroupId: "discord-message-limit",
         slug: "what-is-maximum-character-limit-discord-message",
         title: "What is the Maximum Character Limit for a Discord Message?",
         description: "Learn what is the maximum character limit for a discord message. Understand free vs Nitro limits, how to bypass constraints, and formatting long posts.",
@@ -525,6 +541,8 @@ Understanding **what is the maximum character limit for a discord message** save
     },
     {
         id: 9,
+        language: "en",
+        translationGroupId: "blog-post-seo-length-2026",
         slug: "optimal-length-for-blog-post-seo-2026",
         title: "The Optimal Length for a Blog Post for SEO in 2026",
         description: "Discover the optimal length for a blog post for seo 2026. Learn how AI Overviews, E-E-A-T guidelines, and search intent redefine long-form content.",
@@ -584,6 +602,8 @@ So, what is the **optimal length for a blog post for seo 2026**? It is exactly a
     },
     {
         id: 10,
+        language: "en",
+        translationGroupId: "twitter-x-premium-vs-free",
         slug: "twitter-x-premium-character-limit-vs-free",
         title: "Twitter (X) Premium Character Limit vs Free User: What You Need to Know",
         description: "Compare the twitter x premium character limit vs free user. Learn how long tweets impact the algorithm and if upgrading to premium is worth the cost.",
