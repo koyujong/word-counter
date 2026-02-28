@@ -13,7 +13,7 @@ const { google } = require('googleapis');
 
 // 1. 환경 변수 확인
 const GCP_KEY_JSON = process.env.GCP_KEY_JSON;
-const NAVER_KEY = process.env.NAVER_INDEXNOW_KEY || 'e01d38b582e3ca9e2698eff4972a6542';
+const NAVER_KEY = process.env.NAVER_INDEXNOW_KEY || '8d2c158e4b213c4547310797e1ea1318';
 
 const BASE_URL = 'https://ct.4kdrivewalk.com';
 const BEFORE_SHA = process.env.BEFORE_SHA;
