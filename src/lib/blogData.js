@@ -654,5 +654,19 @@ If you are a business or creator debating whether to pay the monthly subscriptio
 
 The debate surrounding the **twitter x premium character limit vs free user** highlights the platform's split personality. While free users must continue mastering the sharp, concise wit required by 280 characters (or utilize the art of the Thread), Premium users have been handed massive creative freedom with a 25,000-character canvas. If your brand relies on deep analysis, storytelling, or avoiding algorithm penalties for external links, the Premium limit transforms X from a simple megaphone into a fully-fledged publishing powerhouse.
     `
+    },
+    {
+        id: 999,
+        language: "en",
+        translationGroupId: "test-auto-indexing-word-counter",
+        slug: "test-auto-indexing-verification-word-counter",
+        title: "Test: Auto URL Indexing Verification",
+        description: "This is a test post to verify GitHub Actions auto URL indexing workflow for Word Counter.",
+        date: "2026-02-28",
+        keywords: ["test", "auto indexing"],
+        content: `
+# Auto Indexing Test
+This post verifies that the GitHub Actions workflow automatically submits URLs to Google and Naver.
+        `
     }
 ];
