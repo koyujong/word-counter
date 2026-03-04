@@ -13,7 +13,7 @@ const translations = {
         langFlag: "🇺🇸",
 
         // --- 헤더 ---
-        siteTitle: "Word & Character Counter",
+        siteTitle: "College Essay Word & Character Counter",
         siteSubtitle: "Real-time text analysis — free, fast, and private",
 
         // --- 텍스트 에디터 ---
@@ -153,7 +153,7 @@ const translations = {
         langName: "한국어",
         langFlag: "🇰🇷",
 
-        siteTitle: "글자 수 · 단어 세기",
+        siteTitle: "대학 과제용 글자 수 · 단어 세기",
         siteSubtitle: "실시간 텍스트 분석 — 무료, 초고속, 완전한 개인정보 보호",
 
         placeholder: "여기에 텍스트를 입력하거나 붙여넣기 하세요...",
@@ -287,7 +287,7 @@ const translations = {
         langName: "日本語",
         langFlag: "🇯🇵",
 
-        siteTitle: "文字数・単語カウンター",
+        siteTitle: "大学課題用 文字数・単語カウンター",
         siteSubtitle: "リアルタイムテキスト分析 — 無料・高速・完全プライバシー保護",
 
         placeholder: "ここにテキストを入力または貼り付けてください...",
@@ -421,7 +421,7 @@ const translations = {
         langName: "Español",
         langFlag: "🇪🇸",
 
-        siteTitle: "Contador de Palabras y Caracteres",
+        siteTitle: "Contador de Palabras y Caracteres para Ensayos",
         siteSubtitle: "Análisis de texto en tiempo real — gratis, rápido y privado",
 
         placeholder: "Comienza a escribir o pega tu texto aquí...",
