@@ -22,7 +22,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ct.4kdrivewalk.com
 // ===== SEO 메타데이터 (Next.js Metadata API) =====
 export const metadata = {
     // 기본 메타
-    title: "Word & Character Counter | Free Online Tool — 글자 수 세기",
+    title: "College Essay Word & Character Counter | Free Online Tool — 글자 수 세기",
     description:
         "Free real-time word counter, character counter, and text analyzer tool. Count words, characters (with and without spaces), sentences, paragraphs, and reading time instantly. Supports English, Korean (한국어), Japanese (日本語), and Spanish (Español). 100% private — your text never leaves your browser. 무료 실시간 글자 수 세기, 단어 수 세기 도구.",
     keywords: [
@@ -78,12 +78,12 @@ export const metadata = {
 
     // Open Graph (Facebook, LinkedIn 등)
     openGraph: {
-        title: "Word & Character Counter — Free Real-time Text Analyzer",
+        title: "College Essay Word & Character Counter — Free Real-time Text Analyzer",
         description:
             "Count words, characters, sentences, paragraphs, and reading time instantly. 100% free, private, and multi-language. No sign-up required.",
         type: "website",
         url: BASE_URL,
-        siteName: "Word & Character Counter",
+        siteName: "College Essay Word & Character Counter",
         locale: "en_US",
         alternateLocale: ["ko_KR", "ja_JP", "es_ES"],
     },
@@ -91,13 +91,13 @@ export const metadata = {
     // Twitter Card
     twitter: {
         card: "summary_large_image",
-        title: "Word & Character Counter — Free Online Tool",
+        title: "College Essay Word & Character Counter — Free Online Tool",
         description:
             "Real-time word count, character count, sentence count, and more. Free, private, multi-language.",
     },
 
     // 기타 메타
-    applicationName: "Word & Character Counter",
+    applicationName: "College Essay Word & Character Counter",
     category: "Productivity",
     creator: "Word Counter Team",
     publisher: "Word Counter",
@@ -107,7 +107,7 @@ export const metadata = {
 const jsonLdWebApp = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Word & Character Counter",
+    name: "College Essay Word & Character Counter",
     description:
         "Free real-time word counter, character counter, and text analyzer. Supports English, Korean, Japanese, and Spanish.",
     url: BASE_URL,
