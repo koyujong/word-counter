@@ -7,7 +7,7 @@
  * 추가 기능: 키워드 빈도, 플랫폼 체크, 가독성 점수, 찾기&바꾸기, 텍스트 히스토리
  */
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { analyzeText } from "@/lib/textAnalyzer";
 import { useAutoSave, loadSavedText } from "@/hooks/useAutoSave";
@@ -24,6 +24,7 @@ import FindReplace from "@/components/FindReplace";
 import TextHistory from "@/components/TextHistory";
 import AdBanner from "@/components/AdBanner";
 import SeoContent from "@/components/SeoContent";
+import CountdownOverlay from "@/components/CountdownOverlay";
 
 export default function HomePage() {
     const { t } = useLanguage();
@@ -55,6 +56,19 @@ export default function HomePage() {
 
     // 통계 계산 (useMemo로 텍스트가 변경될 때만 재계산)
     const stats = useMemo(() => analyzeText(text), [text]);
+
+    // 상세 분석 딜레이 상태
+    const [showDetailedAnalysis, setShowDetailedAnalysis] = useState(false);
+    const [isCountdown, setIsCountdown] = useState(false);
+
+    const handleAnalyzeClick = () => {
+        setIsCountdown(true);
+    };
+
+    const handleCountdownComplete = useCallback(() => {
+        setShowDetailedAnalysis(true);
+        setIsCountdown(false);
+    }, []);
 
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-gray-950 flex flex-col transition-colors duration-300">
@@ -110,17 +124,35 @@ export default function HomePage() {
                     {/* 🔍 찾기 & 바꾸기 */}
                     <FindReplace text={text} onTextChange={handleTextChange} />
 
-                    {/* 🎯 타겟 키워드 밀도 분석 */}
-                    <SeoKeywordAnalysis text={text} stats={stats} />
+                    {/* 📊 상세 분석 버튼 또는 결과 */}
+                    {!showDetailedAnalysis ? (
+                        <section className="mb-6">
+                            <button
+                                onClick={handleAnalyzeClick}
+                                disabled={isCountdown || !text.trim()}
+                                className="w-full py-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                                {t.viewDetailedAnalysis || "View Detailed Analysis"}
+                            </button>
+                        </section>
+                    ) : (
+                        <>
+                            {/* 🎯 타겟 키워드 밀도 분석 */}
+                            <SeoKeywordAnalysis text={text} stats={stats} />
 
-                    {/* 🔢 키워드 빈도 분석 */}
-                    <KeywordFrequency text={text} />
+                            {/* 🔢 키워드 빈도 분석 */}
+                            <KeywordFrequency text={text} />
 
-                    {/* 📊 가독성 점수 */}
-                    <ReadabilityScore text={text} stats={stats} />
+                            {/* 📊 가독성 점수 */}
+                            <ReadabilityScore text={text} stats={stats} />
 
-                    {/* 📝 텍스트 히스토리 */}
-                    <TextHistory text={text} onTextChange={handleTextChange} />
+                            {/* 📝 텍스트 히스토리 */}
+                            <TextHistory text={text} onTextChange={handleTextChange} />
+                        </>
+                    )}
                 </article>
 
                 {/* 광고 영역 ② */}
@@ -144,6 +176,14 @@ export default function HomePage() {
                     </p>
                 </div>
             </footer>
+
+            {/* Countdown Overlay */}
+            {isCountdown && (
+                <CountdownOverlay
+                    duration={10}
+                    onComplete={handleCountdownComplete}
+                />
+            )}
         </div>
     );
 }
