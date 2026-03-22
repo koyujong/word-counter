@@ -458,5 +458,31 @@ El famoso límite de 140 caracteres de Twitter (ahora X), luego duplicado a 280,
 
 La diferencia entre **X Premium vs gratuito** es enorme: 280 vs 25,000 caracteres. Si tu marca depende del análisis profundo, Premium convierte X de un megáfono en una plataforma de publicación completa.
     `
+    },
+    {
+        id: 11,
+        language: "es",
+        translationGroupId: "college-essay-word-count-importance",
+        slug: "why-word-count-matters-for-college-admissions-essays",
+        title: "Por qué es Importante el Conteo de Palabras en los Ensayos de Admisión Universitaria en 2026",
+        description: "Descubre por qué cumplir estrictamente con el recuento de palabras en los ensayos de admisión a la universidad es un factor crítico en 2026.",
+        date: "2026-03-22",
+        keywords: ["ensayos universitarios", "importancia del conteo", "longitud Common App", "consejos de admisión"],
+        content: `
+# Por qué es Importante el Conteo de Palabras en los Ensayos de Admisión Universitaria en 2026
+
+Aplicar a la universidad es estresante. Mientras los estudiantes se enfocan en elegir el tema perfecto, a menudo pasan por alto un requisito técnico: el recuento de palabras. Entender **por qué es importante el conteo de palabras en los ensayos de admisión** no es solo seguir reglas; es demostrar madurez y la capacidad de comunicarse de manera concisa.
+
+## Límites Estrictos en los Portales de Aplicación
+Formularios como la Common Application establecen límites explícitos (por ejemplo, 650 palabras). Si escribes 651 palabras, el portal simplemente cortará la última palabra. Usar un contador de caracteres y palabras confiable antes de enviarlo es obligatorio.
+
+## La Psicología del Oficial de Admisiones
+Los oficiales leen miles de ensayos. Pueden detectar fácilmente el texto "de relleno", frases añadidas solo para alcanzar el límite. Un ensayo inflado artificialmente señala falta de habilidades de edición. Un ensayo conciso y bien editado respeta su tiempo y muestra precisión.
+
+## Editar y Reducir es más Difícil que Escribir
+Es genuinamente difícil comunicar una historia personal profunda en 500 o 650 palabras. Dominar el recuento te obliga a eliminar la voz pasiva, quitar adjetivos redundantes y enfocarte en tus puntos más fuertes.
+
+Usa siempre un contador de palabras digital para hacer un seguimiento de tu progreso. Respetar el límite de palabras es tu primera prueba universitaria, probando que puedes escribir con brevedad impactante.
+        `
     }
 ];
